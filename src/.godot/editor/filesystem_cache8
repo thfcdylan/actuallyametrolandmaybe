@@ -1,0 +1,62 @@
+ea4bc82a6ad023ab7ee23ee620429895
+::res://::1718036595
+default_env.tres::Environment::-1::1718036573::0::1::::<><>::
+Globals.gd::GDScript::-1::1718036573::0::1::::<>Node<>::
+HUD.gd::GDScript::-1::1718036573::0::1::::<>CanvasLayer<>::
+HUD.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://HUD.gd<>res://Themes/IntroButtonTheme.tres<>res://Assets/Sprites/game_over.png<>res://Themes/LabelTheme.tres
+icon.png::CompressedTexture2D::903520386596245806::1718036485::1718036596::1::::<><>::
+Junction.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+Junction.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://Junction.gd<>res://Assets/Sprites/transp_circle.png<>res://Assets/Sprites/train_icon.png<>res://Assets/Sprites/track_icon.png<>res://Assets/Sprites/transp_circle_highligh.png<>res://Assets/Sprites/transp_circle_selected.png
+JunctionMenu.gd::GDScript::-1::1718036573::0::1::::<>VBoxContainer<>::
+JunctionMenu.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://Themes/LabelTheme.tres<>res://JunctionMenu.gd<>res://Assets/Sprites/red_button00.png
+Main.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+Main.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://HUD.tscn<>res://Main.gd<>res://Map.gd<>res://JunctionMenu.tscn<>res://Assets/sfx/Construction.wav<>res://Assets/music/beepbox1.ogg
+Map.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+NewObject.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+NewObject.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://NewObject.gd
+Obstacle.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+Obstacle.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://Obstacle.gd<>res://Assets/Sprites/mountains.png
+PassengerList.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+PassengerList.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://PassengerList.gd
+SelectGameMode.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+SelectGameMode.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://SelectGameMode.gd<>res://Themes/IntroButtonTheme.tres<>res://Assets/music/010614songidea(copycat).ogg
+Station.gd::GDScript::-1::1718036573::0::1::::<>Node2D<>::
+Station.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://Station.gd<>res://PassengerList.tscn<>res://Assets/Sprites/station_icon.png<>res://Assets/Sprites/cyan_circle.png
+Train.gd::GDScript::-1::1718036573::0::1::::<>PathFollow2D<>::
+Train.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://Assets/Sprites/train_black.png<>res://Train.gd<>res://PassengerList.tscn<>res://Assets/sfx/Metal Rub 1.wav
+TrainLine.gd::GDScript::-1::1718036573::0::1::::<>Path2D<>::
+TrainLine.tscn::PackedScene::-1::1718036573::0::1::::<><>::res://TrainLine.gd
+::res://Assets/::1718036486
+::res://Assets/fonts/::1718036486
+kenvector_future.ttf::FontFile::6853774413897784472::1718036486::1718036596::1::::<><>::
+SF Distant Galaxy.ttf::FontFile::4515740251014658197::1718036486::1718036596::1::::<><>::
+::res://Assets/music/::1718036486
+010614songidea(copycat).ogg::AudioStreamOggVorbis::671939749901170404::1718036486::1718036596::1::::<><>::
+beepbox1.ogg::AudioStreamOggVorbis::519064312139259735::1718036486::1718036596::1::::<><>::
+::res://Assets/sfx/::1718036486
+Construction.wav::AudioStreamWAV::6434942321187514830::1718036486::1718036596::1::::<><>::
+Metal Rub 1.wav::AudioStreamWAV::6198051603248534028::1718036486::1718036596::1::::<><>::
+steamwhistle_0.wav::AudioStreamWAV::4234243057094036126::1718036486::1718036596::1::::<><>::
+::res://Assets/Sprites/::1718036486
+black_circle.png::CompressedTexture2D::6012082064282351763::1718036485::1718036596::1::::<><>::
+blue_circle.png::CompressedTexture2D::5385786095380798341::1718036485::1718036596::1::::<><>::
+cyan_circle.png::CompressedTexture2D::5665595113975384871::1718036485::1718036596::1::::<><>::
+game_over.png::CompressedTexture2D::2699411425922246429::1718036485::1718036596::1::::<><>::
+green_circle.png::CompressedTexture2D::8152245652365813947::1718036486::1718036596::1::::<><>::
+mountains.png::CompressedTexture2D::2822662189512597461::1718036486::1718036596::1::::<><>::
+red_button00.png::CompressedTexture2D::3886319542310027896::1718036486::1718036596::1::::<><>::
+red_circle.png::CompressedTexture2D::5754829536859162619::1718036486::1718036596::1::::<><>::
+station_icon.png::CompressedTexture2D::7617116342161976537::1718036486::1718036596::1::::<><>::
+track_icon.png::CompressedTexture2D::6369800725182847168::1718036486::1718036596::1::::<><>::
+train1.png::CompressedTexture2D::3187688349935223304::1718036486::1718036596::1::::<><>::
+train_black.png::CompressedTexture2D::1200483313003208415::1718036486::1718036596::1::::<><>::
+train_icon.png::CompressedTexture2D::6644018570268162835::1718036486::1718036596::1::::<><>::
+transp_circle.png::CompressedTexture2D::1773331867139645286::1718036486::1718036596::1::::<><>::
+transp_circle_highligh.png::CompressedTexture2D::3573533958583715138::1718036486::1718036596::1::::<><>::
+transp_circle_selected.png::CompressedTexture2D::8044849434734539190::1718036486::1718036596::1::::<><>::
+ttt_logo.png::CompressedTexture2D::6147603569171894409::1718036486::1718036596::1::::<><>::
+white_circle.png::CompressedTexture2D::3568694303894004782::1718036486::1718036596::1::::<><>::
+yellow_circle.png::CompressedTexture2D::3885668008187904374::1718036486::1718036596::1::::<><>::
+::res://Themes/::1718036486
+IntroButtonTheme.tres::Theme::-1::1718036573::0::1::::<><>::res://Assets/fonts/SF Distant Galaxy.ttf
+LabelTheme.tres::Theme::-1::1718036573::0::1::::<><>::res://Assets/fonts/SF Distant Galaxy.ttf
