@@ -1,34 +1,29 @@
-[gd_scene load_steps=4 format=2]
+[gd_scene load_steps=4 format=3 uid="uid://8odao6vio3tn"]
 
-[ext_resource path="res://Themes/LabelTheme.tres" type="Theme" id=1]
-[ext_resource path="res://JunctionMenu.gd" type="Script" id=2]
-[ext_resource path="res://Assets/Sprites/red_button00.png" type="Texture2D" id=3]
+[ext_resource type="Theme" uid="uid://b4a0oh0umxl4g" path="res://Themes/LabelTheme.tres" id="1"]
+[ext_resource type="Script" path="res://JunctionMenu.gd" id="2"]
+[ext_resource type="Texture2D" uid="uid://bvmtd6apo4pie" path="res://Assets/Sprites/red_button00.png" id="3"]
 
 [node name="JunctionMenu" type="VBoxContainer"]
 offset_right = 20.0
 offset_bottom = 20.0
-script = ExtResource( 2 )
+script = ExtResource("2")
 
 [node name="SplitJunction" type="Button" parent="."]
-offset_right = 202.0
-offset_bottom = 34.0
-theme = ExtResource( 1 )
+layout_mode = 2
+theme = ExtResource("1")
 text = "SPLIT"
 
 [node name="RemoveJunction" type="Button" parent="."]
-offset_top = 38.0
-offset_right = 202.0
-offset_bottom = 89.0
-theme = ExtResource( 1 )
+layout_mode = 2
+theme = ExtResource("1")
 text = "Remove"
-icon = ExtResource( 3 )
+icon = ExtResource("3")
 icon_alignment = 1
 
 [node name="BuyTrain" type="Button" parent="."]
-offset_top = 93.0
-offset_right = 202.0
-offset_bottom = 127.0
-theme = ExtResource( 1 )
+layout_mode = 2
+theme = ExtResource("1")
 text = "Buy Train"
 
 [connection signal="pressed" from="SplitJunction" to="." method="_on_SplitJunction_pressed"]

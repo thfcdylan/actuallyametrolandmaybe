@@ -1,3 +1,13 @@
 res://default_env.tres
 res://SelectGameMode.tscn
 res://Themes/IntroButtonTheme.tres
+res://Themes/LabelTheme.tres
+res://Main.tscn
+res://Junction.tscn
+res://HUD.tscn
+res://TrainLine.tscn
+res://Train.tscn
+res://Station.tscn
+res://NewObject.tscn
+res://JunctionMenu.tscn
+res://TrainLine.gd

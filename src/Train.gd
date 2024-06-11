@@ -21,17 +21,13 @@ func _process(delta):
 	if main.game_is_over:
 		return
 		
-	main.money -= delta
-	if main.money <= 0:
-		main.game_over()
-		return
 	
 	if wait_for > 0:
 		wait_for -= delta
 		return
 		
 	if num_colliding_trains == 0:
-		offset += delta * SPEED * dir
+		progress += delta * SPEED * dir
 		if dir == 1 and progress_ratio >= .99: # todo - check if closer, not .99!
 			var pos = get_parent().curve.get_point_position(0)
 			var dist = pos.distance_to(self.position)
@@ -69,7 +65,6 @@ func _on_Area2D_area_entered(area):
 				new_passenger_list.push_back(passengers[idx])
 			else:
 				waiting = true
-				main.money += MONEY_PER_PASSENGER
 				#wait_for += 0.5
 		passengers = new_passenger_list
 
@@ -92,22 +87,5 @@ func _on_Area2D_area_entered(area):
 #		passengers.append_array(station.passengers)
 		#station.clear_passengers()
 		$PassengerList.update()
-		
-	elif parent.is_in_group("trains"):
-		if parent.get_parent() != self.get_parent(): # Only collide with trains on diff tracks
-			if self.priority < parent.priority:
-				num_colliding_trains += 1
-				wait_for = 3
-			pass
-	elif parent.is_in_group("obstacles"):
-		dir = dir * -1
-	pass
+	
 
-
-func _on_Area2D_area_exited(area):
-	var parent = area.get_parent()
-	if parent.is_in_group("trains"):
-		if parent.get_parent() != self.get_parent(): # Only collide with trains on diff tracks
-			if self.priority < parent.priority:
-				num_colliding_trains -= 1
-	pass

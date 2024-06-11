@@ -46,14 +46,15 @@ func add_train(junc):
 	if junc != null:
 		train.offset = curve.get_closest_offset(junc.position)
 	self.add_child(train)
-	pass
 	
+	pass
 
 func _draw():
 	var points = curve.get_baked_points()
 	if points.size() > 1:
 		draw_polyline(points, Color.BLACK, 10.0)
-		draw_polyline(points, colour, 6.0)
+		draw_polyline(points, colour, 6.0)nmb
+		
 	pass
 	
 

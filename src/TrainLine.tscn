@@ -1,12 +1,9 @@
-[gd_scene load_steps=3 format=2]
+[gd_scene load_steps=3 format=3 uid="uid://ccu4f2k88yobc"]
 
-[ext_resource path="res://TrainLine.gd" type="Script" id=1]
+[ext_resource type="Script" path="res://TrainLine.gd" id="1"]
 
-[sub_resource type="Curve2D" id=1]
-_data = {
-"points": PackedVector2Array(  )
-}
+[sub_resource type="Curve2D" id="1"]
 
 [node name="TrainLine" type="Path2D"]
-curve = SubResource( 1 )
-script = ExtResource( 1 )
+curve = SubResource("1")
+script = ExtResource("1")

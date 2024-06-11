@@ -1,29 +1,29 @@
-[gd_scene load_steps=6 format=2]
+[gd_scene load_steps=6 format=3 uid="uid://l6tg4dwu1eus"]
 
-[ext_resource path="res://Assets/Sprites/train_black.png" type="Texture2D" id=1]
-[ext_resource path="res://Train.gd" type="Script" id=2]
-[ext_resource path="res://PassengerList.tscn" type="PackedScene" id=3]
-[ext_resource path="res://Assets/sfx/Metal Rub 1.wav" type="AudioStream" id=4]
+[ext_resource type="Texture2D" uid="uid://rdr1xgxsy0q2" path="res://Assets/Sprites/train_black.png" id="1"]
+[ext_resource type="Script" path="res://Train.gd" id="2"]
+[ext_resource type="PackedScene" path="res://PassengerList.tscn" id="3"]
+[ext_resource type="AudioStream" uid="uid://cuknafbk4lxls" path="res://Assets/sfx/Metal Rub 1.wav" id="4"]
 
-[sub_resource type="CircleShape2D" id=1]
+[sub_resource type="CircleShape2D" id="1"]
 radius = 11.0
 
 [node name="Train" type="PathFollow2D" groups=["trains"]]
-script = ExtResource( 2 )
+script = ExtResource("2")
 
-[node name="PassengerList" parent="." instance=ExtResource( 3 )]
+[node name="PassengerList" parent="." instance=ExtResource("3")]
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
-scale = Vector2( 3, 3 )
-texture = ExtResource( 1 )
+scale = Vector2(3, 3)
+texture = ExtResource("1")
 
 [node name="Area2D" type="Area2D" parent="."]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Area2D"]
-shape = SubResource( 1 )
+shape = SubResource("1")
 
 [node name="Audio_Arrive" type="AudioStreamPlayer" parent="."]
-stream = ExtResource( 4 )
+stream = ExtResource("4")
 
 [connection signal="area_entered" from="Area2D" to="." method="_on_Area2D_area_entered"]
 [connection signal="area_exited" from="Area2D" to="." method="_on_Area2D_area_exited"]
