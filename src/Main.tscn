@@ -33,8 +33,8 @@ autoplay = true
 autostart = true
 
 [node name="JunctionMenu" parent="." instance=ExtResource( 4 )]
-offset_right = 134.0
-offset_bottom = 110.0
+margin_right = 134.0
+margin_bottom = 110.0
 
 [connection signal="timeout" from="Map/NewStationTimer" to="Map" method="_on_NewStationTimer_timeout"]
 [connection signal="timeout" from="OneSecTimer" to="." method="_on_OneSecTimer_timeout"]

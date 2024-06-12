@@ -56,7 +56,7 @@ func _on_UniqueStation_pressed():
 func start():
 	Globals.reset()
 	
-	var _unused = get_tree().change_scene_to_file("res://Main.tscn")
+	var _unused = get_tree().change_scene("res://Main.tscn")
 	pass
 
 
@@ -84,7 +84,7 @@ func _on_EarthquakeMode_pressed():
 
 
 func _on_Full_Screen_pressed():
-	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (!((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN))) else Window.MODE_WINDOWED
+	OS.window_fullscreen = !OS.window_fullscreen
 	pass
 
 

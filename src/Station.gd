@@ -1,6 +1,6 @@
 extends Node2D
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 var passengers = []
 var colour : int
@@ -12,7 +12,7 @@ func _ready():
 		$ChangeColourTimer.start()
 		
 	colour = Globals.get_next_station_colour_number()
-	$Sprite2D.texture = Globals.get_station_texture(colour)
+	$Sprite.texture = Globals.get_station_texture(colour)
 	add_passenger()
 	pass
 
@@ -70,6 +70,6 @@ func _on_ChangeColourTimer_timeout():
 		return
 		
 	colour = Globals.get_next_station_colour_number()
-	$Sprite2D.texture = Globals.get_station_texture(colour)
+	$Sprite.texture = Globals.get_station_texture(colour)
 	
 	pass

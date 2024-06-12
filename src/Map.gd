@@ -4,7 +4,7 @@ var station_class = preload("res://Station.tscn")
 var obstacle_class = preload("res://Obstacle.tscn")
 var new_object_class = preload("res://NewObject.tscn")
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 
 func _ready():
@@ -34,9 +34,9 @@ func _on_NewStationTimer_timeout():
 
 func add_station():
 	Globals.num_stations += 1
-	var station = station_class.instantiate()
+	var station = station_class.instance()
 	
-	var obj = new_object_class.instantiate()
+	var obj = new_object_class.instance()
 	obj.visible = false
 	
 	obj.position = station.get_new_position()
@@ -50,8 +50,8 @@ func add_station():
 
 
 func add_obstacle():
-	var obs = obstacle_class.instantiate()
-	var obj = new_object_class.instantiate()
+	var obs = obstacle_class.instance()
+	var obj = new_object_class.instance()
 	obj.visible = false
 	var pos = obs.get_new_position()
 	obj.position = pos

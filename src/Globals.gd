@@ -35,7 +35,7 @@ var rnd : RandomNumberGenerator
 
 func _ready():
 	if RELEASE_MODE:
-		get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (true) else Window.MODE_WINDOWED
+		OS.window_fullscreen = true
 
 	rnd = RandomNumberGenerator.new()
 	rnd.randomize()
@@ -93,10 +93,10 @@ func get_next_track_colour() -> Color:
 	if next_track_colour >= MAX_TRACK_COLOURS:
 		next_track_colour = 0
 	match next_track_colour:
-		0: return Color.YELLOW
-		1: return Color.GREEN
-		2: return Color.BLUE
-		3: return Color.MAGENTA
-		4: return Color.CYAN
-		5: return Color.RED
-	return Color.BLACK
+		0: return Color.yellow
+		1: return Color.green
+		2: return Color.blue
+		3: return Color.magenta
+		4: return Color.cyan
+		5: return Color.red
+	return Color.black

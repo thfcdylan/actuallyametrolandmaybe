@@ -1,6 +1,6 @@
 extends VBoxContainer
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 func _on_SplitJunction_pressed():
 	var junction = main.selected_junction

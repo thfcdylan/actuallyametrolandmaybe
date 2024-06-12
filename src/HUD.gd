@@ -1,6 +1,6 @@
 extends CanvasLayer
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 var instruction_idx:int = 0
 
@@ -32,7 +32,7 @@ func _ready():
 	
 	
 func _process(_delta):
-	$InstructionLabel.position = main.get_local_mouse_position()
+	$InstructionLabel.rect_position = main.get_local_mouse_position()
 	pass
 	
 
@@ -71,7 +71,7 @@ func set_tracks_left(s: int):
 
 
 func _on_FullScreen_pressed():
-	get_window().mode = Window.MODE_EXCLUSIVE_FULLSCREEN if (not ((get_window().mode == Window.MODE_EXCLUSIVE_FULLSCREEN) or (get_window().mode == Window.MODE_FULLSCREEN))) else Window.MODE_WINDOWED
+	OS.window_fullscreen = not OS.window_fullscreen
 	pass
 
 

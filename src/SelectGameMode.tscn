@@ -1,79 +1,102 @@
-[gd_scene load_steps=4 format=3 uid="uid://fdt1c6ia7gdy"]
+[gd_scene load_steps=4 format=2]
 
-[ext_resource type="Script" path="res://SelectGameMode.gd" id="1"]
-[ext_resource type="Theme" uid="uid://tae5wm0sbaad" path="res://Themes/IntroButtonTheme.tres" id="2"]
-[ext_resource type="AudioStream" uid="uid://jtq0qoygnmg7" path="res://Assets/music/010614songidea(copycat).ogg" id="3"]
+[ext_resource path="res://SelectGameMode.gd" type="Script" id=1]
+[ext_resource path="res://Themes/IntroButtonTheme.tres" type="Theme" id=2]
+[ext_resource path="res://Assets/music/010614songidea(copycat).ogg" type="AudioStream" id=3]
 
 [node name="SelectGameMode" type="Node2D"]
-script = ExtResource("1")
+script = ExtResource( 1 )
 
 [node name="CanvasLayer" type="CanvasLayer" parent="."]
 
 [node name="Full Screen" type="Button" parent="CanvasLayer"]
-offset_right = 331.0
-offset_bottom = 79.0
-theme = ExtResource("2")
+margin_right = 331.0
+margin_bottom = 79.0
+theme = ExtResource( 2 )
 text = "Full Screen"
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="CenterContainer" type="CenterContainer" parent="CanvasLayer"]
-anchors_preset = 8
 anchor_left = 0.5
 anchor_top = 0.5
 anchor_right = 0.5
 anchor_bottom = 0.5
-offset_left = -308.0
-offset_top = -294.0
-offset_right = 308.0
-offset_bottom = 294.0
+margin_left = -308.0
+margin_top = -294.0
+margin_right = 308.0
+margin_bottom = 294.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="VBoxContainer" type="VBoxContainer" parent="CanvasLayer/CenterContainer"]
-layout_mode = 2
+margin_top = 96.0
+margin_right = 755.0
+margin_bottom = 491.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
 
 [node name="SimpleMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
 visible = false
-layout_mode = 2
-theme = ExtResource("2")
+margin_right = 737.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
 text = "Tutorial Mode"
 
 [node name="NormalMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_right = 755.0
+margin_bottom = 53.0
+theme = ExtResource( 2 )
 text = "Normal Mode"
 
 [node name="SingleTrack" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 57.0
+margin_right = 755.0
+margin_bottom = 110.0
+theme = ExtResource( 2 )
 text = "Single Track Challenge"
 
 [node name="UniqueStation" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 114.0
+margin_right = 755.0
+margin_bottom = 167.0
+theme = ExtResource( 2 )
 text = "Unique Station Challenge"
 
 [node name="MegalopolisMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 171.0
+margin_right = 755.0
+margin_bottom = 224.0
+theme = ExtResource( 2 )
 text = "Megalopolis Mode"
 
 [node name="EarthquakeMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 228.0
+margin_right = 755.0
+margin_bottom = 281.0
+theme = ExtResource( 2 )
 text = "Earthquake Mode"
 
 [node name="ChangingStationsMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 285.0
+margin_right = 755.0
+margin_bottom = 338.0
+theme = ExtResource( 2 )
 text = "Changing Stations Mode"
 
 [node name="FreeMode" type="Button" parent="CanvasLayer/CenterContainer/VBoxContainer"]
-layout_mode = 2
-theme = ExtResource("2")
+margin_top = 342.0
+margin_right = 755.0
+margin_bottom = 395.0
+theme = ExtResource( 2 )
 text = "Free Mode"
 
 [node name="AudioStreamPlayer_Music" type="AudioStreamPlayer" parent="."]
-stream = ExtResource("3")
+stream = ExtResource( 3 )
 autoplay = true
-
 [connection signal="pressed" from="CanvasLayer/Full Screen" to="." method="_on_Full_Screen_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/SimpleMode" to="." method="_on_SimpleMode_pressed"]
 [connection signal="pressed" from="CanvasLayer/CenterContainer/VBoxContainer/NormalMode" to="." method="_on_NormalMode_pressed"]

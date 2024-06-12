@@ -3,7 +3,7 @@ extends PathFollow2D
 const SPEED = 40
 const MONEY_PER_PASSENGER = 8
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 var passengers = []
 var num_colliding_trains = 0
@@ -32,19 +32,19 @@ func _process(delta):
 		
 	if num_colliding_trains == 0:
 		offset += delta * SPEED * dir
-		if dir == 1 and progress_ratio >= .99: # todo - check if closer, not .99!
+		if dir == 1 and unit_offset >= .99: # todo - check if closer, not .99!
 			var pos = get_parent().curve.get_point_position(0)
 			var dist = pos.distance_to(self.position)
 			if dist < 40:
-				progress_ratio = 0
+				unit_offset = 0
 			else:
 				dir = -1
-		elif dir == -1 and progress_ratio <= 0.01: # todo - check if closer, not .01!
+		elif dir == -1 and unit_offset <= 0.01: # todo - check if closer, not .01!
 			var curve: Curve2D = get_parent().curve
 			var pos = curve.get_point_position(curve.get_point_count()-1)
 			var dist = pos.distance_to(self.position)
 			if dist < 40:
-				progress_ratio = 1
+				unit_offset = 1
 			else:
 				dir = 1
 	pass

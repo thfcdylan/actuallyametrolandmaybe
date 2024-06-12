@@ -2,8 +2,8 @@
 
 [ext_resource path="res://Station.gd" type="Script" id=1]
 [ext_resource path="res://PassengerList.tscn" type="PackedScene" id=2]
-[ext_resource path="res://Assets/Sprites/station_icon.png" type="Texture2D" id=3]
-[ext_resource path="res://Assets/Sprites/cyan_circle.png" type="Texture2D" id=4]
+[ext_resource path="res://Assets/Sprites/station_icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/cyan_circle.png" type="Texture" id=4]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 31.1448
@@ -11,20 +11,20 @@ radius = 31.1448
 [node name="Station" type="Node2D" groups=["stations"]]
 script = ExtResource( 1 )
 
-[node name="Area3D" type="Area2D" parent="." groups=["stations"]]
+[node name="Area" type="Area2D" parent="." groups=["stations"]]
 
-[node name="CollisionShape2D" type="CollisionShape2D" parent="Area3D"]
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Area"]
 shape = SubResource( 1 )
 
 [node name="NewPassengerTimer" type="Timer" parent="."]
 wait_time = 20.0
 autostart = true
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 1.6, 1.6 )
 texture = ExtResource( 4 )
 
-[node name="StationIcon" type="Sprite2D" parent="."]
+[node name="StationIcon" type="Sprite" parent="."]
 visible = false
 texture = ExtResource( 3 )
 

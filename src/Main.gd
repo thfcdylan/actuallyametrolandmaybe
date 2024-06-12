@@ -37,15 +37,15 @@ func _unhandled_input(event):
 					selected_junction = sel
 					potential_dragging = true
 					$JunctionMenu.visible = true
-					$JunctionMenu.position = selected_junction.position
-					$JunctionMenu.position += Vector2(100, 0)
-					if $JunctionMenu.position.x + $JunctionMenu.size.x > 1920:
-						var excess = ($JunctionMenu.position.x + $JunctionMenu.size.x) - 1920
-						$JunctionMenu.position.x -= excess
-					if $JunctionMenu.position.y + $JunctionMenu.size.y > 1080:
-						var excess = ($JunctionMenu.position.y + $JunctionMenu.size.y) - 1080
+					$JunctionMenu.rect_position = selected_junction.position
+					$JunctionMenu.rect_position += Vector2(100, 0)
+					if $JunctionMenu.rect_position.x + $JunctionMenu.rect_size.x > 1920:
+						var excess = ($JunctionMenu.rect_position.x + $JunctionMenu.rect_size.x) - 1920
+						$JunctionMenu.rect_position.x -= excess
+					if $JunctionMenu.rect_position.y + $JunctionMenu.rect_size.y > 1080:
+						var excess = ($JunctionMenu.rect_position.y + $JunctionMenu.rect_size.y) - 1080
 #						print(str(excess))
-						$JunctionMenu.position.y -= excess
+						$JunctionMenu.rect_position.y -= excess
 				else:
 					$JunctionMenu.visible = false
 					add_junctions($Map.get_local_mouse_position())
@@ -93,15 +93,15 @@ func _input(event):
 					selected_junction = sel
 					potential_dragging = true
 					$JunctionMenu.visible = true
-					$JunctionMenu.position = selected_junction.position
-					$JunctionMenu.position += Vector2(100, 0)
-					if $JunctionMenu.position.x + $JunctionMenu.size.x > 1920:
-						var excess = ($JunctionMenu.position.x + $JunctionMenu.size.x) - 1920
-						$JunctionMenu.position.x -= excess
-					if $JunctionMenu.position.y + $JunctionMenu.size.y > 1080:
-						var excess = ($JunctionMenu.position.y + $JunctionMenu.size.y) - 1080
+					$JunctionMenu.rect_position = selected_junction.position
+					$JunctionMenu.rect_position += Vector2(100, 0)
+					if $JunctionMenu.rect_position.x + $JunctionMenu.rect_size.x > 1920:
+						var excess = ($JunctionMenu.rect_position.x + $JunctionMenu.rect_size.x) - 1920
+						$JunctionMenu.rect_position.x -= excess
+					if $JunctionMenu.rect_position.y + $JunctionMenu.rect_size.y > 1080:
+						var excess = ($JunctionMenu.rect_position.y + $JunctionMenu.rect_size.y) - 1080
 #						print(str(excess))
-						$JunctionMenu.position.y -= excess
+						$JunctionMenu.rect_position.y -= excess
 				else:
 					$JunctionMenu.visible = false
 					add_junctions($Map.get_local_mouse_position())
@@ -139,7 +139,7 @@ func add_junctions(map_position:Vector2):
 	if selected_junction == null:
 		if Globals.num_tracks < Globals.MAX_TRACKS:
 			# start new line
-			var train_line = train_line_class.instantiate()
+			var train_line = train_line_class.instance()
 			train_line.curve = Curve2D.new()
 			selected_junction = train_line.add_junction(map_position)
 			$Map.add_child(train_line)
@@ -158,7 +158,7 @@ func add_junctions(map_position:Vector2):
 	
 func _process(_delta):
 	if Input.is_action_just_pressed("ui_cancel"):
-		var _unused = get_tree().change_scene_to_file("res://SelectGameMode.tscn")
+		var _unused = get_tree().change_scene("res://SelectGameMode.tscn")
 
 	update()
 	pass
@@ -171,7 +171,7 @@ func _draw():
 	if mouse_pos != null and selected_junction != null and mouse_over_icons == false:
 		var train_line = selected_junction.get_parent()
 		var end = (train_line.get_end_pos() + $Map.position)# * $Map.scale
-		draw_line(end, mouse_pos, Color.BLACK, 7)
+		draw_line(end, mouse_pos, Color.black, 7)
 	pass
 	
 	

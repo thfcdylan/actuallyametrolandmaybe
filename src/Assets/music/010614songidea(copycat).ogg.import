@@ -1,19 +1,15 @@
 [remap]
 
-importer="oggvorbisstr"
-type="AudioStreamOggVorbis"
-uid="uid://jtq0qoygnmg7"
-path="res://.godot/imported/010614songidea(copycat).ogg-6d8b1a4f0e64b2b31d8a2fb8dd6648ef.oggvorbisstr"
+importer="ogg_vorbis"
+type="AudioStreamOGGVorbis"
+path="res://.import/010614songidea(copycat).ogg-6d8b1a4f0e64b2b31d8a2fb8dd6648ef.oggstr"
 
 [deps]
 
 source_file="res://Assets/music/010614songidea(copycat).ogg"
-dest_files=["res://.godot/imported/010614songidea(copycat).ogg-6d8b1a4f0e64b2b31d8a2fb8dd6648ef.oggvorbisstr"]
+dest_files=[ "res://.import/010614songidea(copycat).ogg-6d8b1a4f0e64b2b31d8a2fb8dd6648ef.oggstr" ]
 
 [params]
 
 loop=true
 loop_offset=0
-bpm=0
-beat_count=0
-bar_beats=4

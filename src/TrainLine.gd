@@ -3,7 +3,7 @@ extends Path2D
 var junction_class = preload("res://Junction.tscn")
 var train_class = preload("res://Train.tscn")
 
-@onready var main = get_tree().get_root().get_node("Main")
+onready var main = get_tree().get_root().get_node("Main")
 
 var colour : Color
 var junctions = [] # Must be same order as curnve points
@@ -20,7 +20,7 @@ func get_end_pos():
 
 	
 func add_junction(pos:Vector2):
-	var junc = junction_class.instantiate()
+	var junc = junction_class.instance()
 	junc.position = pos
 	self.add_child(junc)
 	junctions.push_back(junc)
@@ -42,7 +42,7 @@ func update_junction_icons():
 	
 	
 func add_train(junc):
-	var train = train_class.instantiate()
+	var train = train_class.instance()
 	if junc != null:
 		train.offset = curve.get_closest_offset(junc.position)
 	self.add_child(train)
@@ -52,7 +52,7 @@ func add_train(junc):
 func _draw():
 	var points = curve.get_baked_points()
 	if points.size() > 1:
-		draw_polyline(points, Color.BLACK, 10.0)
+		draw_polyline(points, Color.black, 10.0)
 		draw_polyline(points, colour, 6.0)
 	pass
 	
@@ -60,7 +60,7 @@ func _draw():
 func insert_junction(orig_junc):
 	var idx = junctions.find(orig_junc)
 
-	var new_junc = junction_class.instantiate()
+	var new_junc = junction_class.instance()
 	new_junc.position = orig_junc.position
 	new_junc.position.x += 20
 	new_junc.position.y += 20

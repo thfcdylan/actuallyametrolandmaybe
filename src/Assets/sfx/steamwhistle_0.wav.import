@@ -1,14 +1,13 @@
 [remap]
 
 importer="wav"
-type="AudioStreamWAV"
-uid="uid://b1ldmnnc1quqo"
-path="res://.godot/imported/steamwhistle_0.wav-5af2983eec6cbc6a7eeacff0325b02b7.sample"
+type="AudioStreamSample"
+path="res://.import/steamwhistle_0.wav-5af2983eec6cbc6a7eeacff0325b02b7.sample"
 
 [deps]
 
 source_file="res://Assets/sfx/steamwhistle_0.wav"
-dest_files=["res://.godot/imported/steamwhistle_0.wav-5af2983eec6cbc6a7eeacff0325b02b7.sample"]
+dest_files=[ "res://.import/steamwhistle_0.wav-5af2983eec6cbc6a7eeacff0325b02b7.sample" ]
 
 [params]
 
@@ -18,7 +17,5 @@ force/max_rate=false
 force/max_rate_hz=44100
 edit/trim=false
 edit/normalize=false
-edit/loop_mode=0
-edit/loop_begin=0
-edit/loop_end=-1
+edit/loop=false
 compress/mode=0

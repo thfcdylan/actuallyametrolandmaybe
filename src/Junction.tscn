@@ -1,11 +1,11 @@
 [gd_scene load_steps=8 format=2]
 
 [ext_resource path="res://Junction.gd" type="Script" id=1]
-[ext_resource path="res://Assets/Sprites/transp_circle.png" type="Texture2D" id=2]
-[ext_resource path="res://Assets/Sprites/train_icon.png" type="Texture2D" id=3]
-[ext_resource path="res://Assets/Sprites/track_icon.png" type="Texture2D" id=4]
-[ext_resource path="res://Assets/Sprites/transp_circle_highligh.png" type="Texture2D" id=5]
-[ext_resource path="res://Assets/Sprites/transp_circle_selected.png" type="Texture2D" id=6]
+[ext_resource path="res://Assets/Sprites/transp_circle.png" type="Texture" id=2]
+[ext_resource path="res://Assets/Sprites/train_icon.png" type="Texture" id=3]
+[ext_resource path="res://Assets/Sprites/track_icon.png" type="Texture" id=4]
+[ext_resource path="res://Assets/Sprites/transp_circle_highligh.png" type="Texture" id=5]
+[ext_resource path="res://Assets/Sprites/transp_circle_selected.png" type="Texture" id=6]
 
 [sub_resource type="CircleShape2D" id=1]
 radius = 16.0312
@@ -15,24 +15,24 @@ script = ExtResource( 1 )
 
 [node name="Area2D" type="Area2D" parent="."]
 
-[node name="CollisionShape3D" type="CollisionShape2D" parent="Area2D"]
+[node name="CollisionShape" type="CollisionShape2D" parent="Area2D"]
 shape = SubResource( 1 )
 
-[node name="Sprite2D" type="Sprite2D" parent="."]
+[node name="Sprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 2 )
 
-[node name="TrainSprite" type="Sprite2D" parent="."]
+[node name="TrainSprite" type="Sprite" parent="."]
 scale = Vector2( 0.5, 0.5 )
 texture = ExtResource( 3 )
 
-[node name="TrackSprite" type="Sprite2D" parent="."]
+[node name="TrackSprite" type="Sprite" parent="."]
 texture = ExtResource( 4 )
 
-[node name="SpriteHighlighted" type="Sprite2D" parent="."]
+[node name="SpriteHighlighted" type="Sprite" parent="."]
 texture = ExtResource( 5 )
 
-[node name="SpriteSelected" type="Sprite2D" parent="."]
+[node name="SpriteSelected" type="Sprite" parent="."]
 texture = ExtResource( 6 )
 
 [connection signal="mouse_entered" from="Area2D" to="." method="_on_Area2D_mouse_entered"]
